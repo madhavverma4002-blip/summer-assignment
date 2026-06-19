@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class fibbonacci{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+System.out.print("Enter n");
+int n=sc.nextInt();
+int a=0, b=1  ,sum=0;
+        if (n == 1) {
+            System.out.println("The 1st Fibonacci number is 0");
+        } else if (n == 2) {
+            System.out.println("The 2nd Fibonacci number is 1");
+        } else {
+            for (int i = 1; i <= n - 2; i++) {
+                sum = a + b;
+                a = b;
+                b = sum;
+            }
+            System.out.printf("The %dth Fibonacci number is %d%n", n, sum);
+        }
+
+        sc.close();
+    }
+}
